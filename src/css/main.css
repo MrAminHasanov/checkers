@@ -1,33 +1,145 @@
 body{
     background-color: rgb(119, 85, 34);
 }
-
 .box{
     border: 2px solid black;
     width: 450px;
     height: 450px;
     margin: 30px auto;
-}
-.unboxl1{
-    display: flex;
-    width: 100%;
-    height: 12.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .unboxl2{
-    width: 12.5%;
     padding: 10px;
 }
+/* #region stn */
 .kam-bel{
-    border: 1px solid black;
+    position: relative;
+    border: 2px solid black;
+    bottom: 2px;
+    right: 2px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: white;
+    transform: rotate(-55deg);
+    background: rgb(242,242,242);
+    background: linear-gradient(90deg, rgba(242,242,242,1) 43%, rgb(143, 142, 142) 65%, rgba(236,236,236,1) 81%);
 }
 .kam-cher{
-    border: 1px solid white;
+    position: relative;
+    border: 2px solid black;
+    bottom: 2px;
+    right: 2px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: rgb(37, 37, 37);
+    /* background-color: rgb(40, 40, 40); */
+    transform: rotate(55deg);
+    background: rgb(40, 40, 40);
+    background: linear-gradient(90deg, rgba(40, 40, 40,1) 43%, rgb(85, 84, 84) 65%, rgba(40, 40, 40,1) 81%);
+}
+.kam-bel::after{
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 6px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    /* background: rgb(243, 243, 243); */
+    /* background: linear-gradient(90deg, rgb(221, 218, 218) 43%, rgb(168, 168, 168) 65%, rgb(221, 218, 218) 81%); */
+}
+.kam-cher::after{
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 6px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgb(20, 20, 20);
+    /* background: linear-gradient(90deg, rgba(20, 20, 20,1) 43%, rgb(100, 100, 100) 65%, rgba(20, 20, 20,1) 81%); */
+    /* background-color: rgb(20, 20, 20); */
+}
+/* .kr::after {background: rgb(242,13,13);
+    background: linear-gradient(90deg, rgba(242,13,13,1) 52%, rgba(242,242,242,1) 74%, rgba(242,13,13,1) 88%);
+    
+} */
+/* #endregion */
+/* #region stng */
+.stng {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    right: inherit;
+    top: 150px;
+    left: 40px;
+}
+.stng > div p:first-child{
+    cursor: pointer;
+    transform: translate(-110%,-15px);
+}
+.stng > div p:last-child{
+    cursor: pointer;
+    transform: translate(50%,-15px);
+}
+/* #region white or black button*/
+.stng > div{
+    border-radius: 18px;
+    background-color: white;
+    height: 23px;
+    width: 50px;
+    margin-top:10px;
+}
+.ball {
+    transition: ease all .3s;
+    position: absolute;
+    transform: translate(4px,3px);
+    width: 17px;
+    height: 17px;
+    background-color: rgb(0, 217, 255);
+    border-radius: 50%;
+}
+/* #endregion */
+.stng label{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.stng > button{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:10px;
+    border-radius: 14px;
+    border-left:none;
+    border-right: none;
+    cursor: pointer;
+}
+.stng button:hover{
+    background-color: rgb(56, 136, 56);
+}
+.stng button:first-child:active{
+    padding: 7px 12px 6px;
+    border-top:3px solid black;
+    border-bottom:3px solid transparent;
+    
+}
+.stng_clickup{
+    background-color: rgb(84, 184, 84);
+    border-top: 2px solid transparent;
+    border-bottom: 3px solid black;
+    padding: 5px 12px 8px;
+}
+.stng_clickdown{
+    background-color: rgb(56, 136, 56);
+    padding: 7px 12px 6px;
+    border-top-color:black;
+    border-bottom-color:transparent;
+}
+/* #endregion */
+.dp{
+    display: none;
+}
+.df{
+    display: flex;
 }
