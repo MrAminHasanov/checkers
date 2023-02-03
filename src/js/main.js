@@ -176,8 +176,8 @@ function regular(){//find which stones turn and regular horizontal direction
 }
 function getstartcr(e){
     if(e.target.classList[0]===stn){
-    cr.xst=Number(e.path[1].classList[1][1]);//stone selector
-    cr.yst=Number(e.path[1].classList[1][2]);
+    cr.xst=Number(e.srcElement.parentElement.classList[1][1]);//stone selector
+    cr.yst=Number(e.srcElement.parentElement.classList[1][2]);
     st=document.querySelector(`.c${cr.xst}${cr.yst}`);
     st.children[0].style.borderColor="white";
     test=false;
@@ -277,7 +277,7 @@ function stoneadd(e){
         }
     }
     else if (e.target.classList[0]=="kam-bel" || e.target.classList[0]=="kam-cher"){
-        e.path[1].innerHTML='';};
+        e.srcElement.parentElement.innerHTML='';};
 }
 //
 const rotbtn = document.querySelector("#rotate");
