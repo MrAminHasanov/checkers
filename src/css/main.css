@@ -135,6 +135,12 @@ body{
     padding: 7px 12px 6px;
     border-top-color:black;
     border-bottom-color:transparent;
+}  
+@media screen and (max-width:820px) {
+    .stng{
+        display: block;
+        margin-top:400px ;
+    }
 }
 /* #endregion */
 .dp{

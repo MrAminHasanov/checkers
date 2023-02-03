@@ -118,9 +118,6 @@ function combocheck(){
             if(document.querySelector(`.c${cr.xaf-1}${cr.yaf-1}`).innerHTML!="" && document.querySelector(`.c${cr.xaf-2}${cr.yaf-2}`).innerHTML==""){
                 if (document.querySelector(`.c${cr.xaf-1}${cr.yaf-1}`).children[0].classList[0]==stn2){
                     test3=true;
-                    cr.xst=cr.xaf;
-                    cr.yst=cr.yaf;
-                    st=document.querySelector(`.c${cr.xst}${cr.yst}`);
                 }
             }
         }
@@ -128,9 +125,6 @@ function combocheck(){
             if(document.querySelector(`.c${cr.xaf-1}${cr.yaf+1}`).innerHTML!="" && document.querySelector(`.c${cr.xaf-2}${cr.yaf+2}`).innerHTML==""){
                 if (document.querySelector(`.c${cr.xaf-1}${cr.yaf+1}`).children[0].classList[0]==stn2){
                     test3=true;
-                    cr.xst=cr.xaf;
-                    cr.yst=cr.yaf;
-                    st=document.querySelector(`.c${cr.xst}${cr.yst}`);
                 }
             }
         }
@@ -140,9 +134,6 @@ function combocheck(){
             if(document.querySelector(`.c${cr.xaf+1}${cr.yaf-1}`).innerHTML!="" && document.querySelector(`.c${cr.xaf+2}${cr.yaf-2}`).innerHTML==""){
                 if (document.querySelector(`.c${cr.xaf+1}${cr.yaf-1}`).children[0].classList[0]==stn2){
                     test3=true;
-                    cr.xst=cr.xaf;
-                    cr.yst=cr.yaf;
-                    st=document.querySelector(`.c${cr.xst}${cr.yst}`);
                 }
             }
         }
@@ -150,9 +141,6 @@ function combocheck(){
             if(document.querySelector(`.c${cr.xaf+1}${cr.yaf+1}`).innerHTML!="" && document.querySelector(`.c${cr.xaf+2}${cr.yaf+2}`).innerHTML==""){
                 if (document.querySelector(`.c${cr.xaf+1}${cr.yaf+1}`).children[0].classList[0]==stn2){
                     test3=true;
-                    cr.xst=cr.xaf;
-                    cr.yst=cr.yaf;
-                    st=document.querySelector(`.c${cr.xst}${cr.yst}`);
                 }
             }
         }
@@ -160,6 +148,10 @@ function combocheck(){
     if(test3==false){
         test2 = !test2;
         rotatetable();
+    }else{
+        cr.xst=cr.xaf;
+        cr.yst=cr.yaf;
+        st=document.querySelector(`.c${cr.xst}${cr.yst}`);
     }
 }
 function regular(){//find which stones turn and regular horizontal direction
